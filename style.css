@@ -75,3 +75,17 @@ img{
     margin: 0px auto;
 }
 
+section.hakushin{
+    font-size: 40px;
+    text-align: center;
+    margin: 30px 10px 30px 10px;
+}
+
+.c-lang{
+    font-size: 30px;
+    border-bottom: solid 2px orange;
+}
+
+.c-langg{
+    text-align: center;
+}
