@@ -1,53 +1,95 @@
-<!--気になったこと、覚えておきたいことをまとめます-->
-<!--コメントを随時追加-->
-
 <!DOCTYPE html>
-<html>
-<!--htmlタグ言語設定は消していい-->
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--これなんだろう？-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <!--cssの指定 rel hrefを間違えないように-->
 </head>
 
 <body>
-    <header>
-        <h1 class="title">CSS覚え書き</h1>
-        <nav class="nav">
-            <ul class="menu-group">
-                <li class="menu-item"><a href="#">ABOUT ME<br>管理人情報</a></li>
-                <li class="menu-item"><a href="#">ITEM<br>要素</a></li>
-                <li class="menu-item"><a href="#">CONTACT<br>お問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="mv-style">
-            <img src="hero.jpg" alt="">
+    <p class="boxmodeltest">要素にはpadding,margin,borderを適用できる</p>
+    <p class="content-box">box-sizing:content-box400px</p>
+    <p class="border-box">box-sizing:border-box400px</p>
+    <p class="center">↑border-boxはボーダー含めて400pxになっている</p>
+    <h1>使用する単位</h1>
+    <p>px-ピクセル値での絶対指定</p>
+    <p>%-親要素の幅、高さに対してのパーセンテージで指定</p>
+    <p>vw-viewportwithの略。ブラウザの画面幅に応じて指定できる。%に似ているが親要素によらない</p>
+    <p>vh-viewportheightの略。上に同じ</p>
+    <p>em-フォントサイズに使われる。1em=1文字分。親要素のフォントサイズに応じた文字数</p>
+    <p>rem-rootタグ(htmlタグ)に指定されたフォントサイズに応じたem <br> <br></p>
+    <img src="imgtest.jpg" alt="test" class="floattest">
+    <p>width:100px;などとmax-width:100%などを併せて使うと限界幅。高さを指定できる</p>
+    <p>line-heightを使うと行間を指定できる。1だと行間ゼロ <br> <br></p>
+    <p>画像の回り込みをさせたいときはfloat:right/left;でできる</p>
+    <p>上手くいってニッコニコワイ→ <br> <br></p>
+
+    <h1>メディアクエリ</h1>
+    <p>@media screen and (max-width:480px) {cssをここに記述} <br><br></p>
+    <h1>リンクを作る</h1>
+    <div class="linkmake">
+        <a href="#" class="text-link">テキストリンクも</a>
+        <a href="#" target="_blank" class="button-link">ボタンリンクも</a>
+        <a href="#" class="button-link2">作れちゃう</a>
+    </div>
+    <p>text-decorationは最初からunderlineが指定されている。</p>
+    <p>a:hoverとかa:activeとかを使うことができる</p>
+    <p>角丸にしたいときはborder-radius:20px; <br><br></p>
+
+    <h1>リストを作る</h1>
+    <p>ulタグは普通の箇条書き、olタグは数字付きの箇条書き</p>
+    <h2>干し芋のリスト</h2>
+    <ul class="hosiimo">
+        <li>RTX3060 12GB OC</li>
+        <li>Intel core i5 12400F</li>
+        <li>B660B-G ASUSのマザーボード</li>
+    </ul>
+    <h1>グローバルナビゲーションなるものを作る</h1>
+    <nav>
+        <ul class="gnav-list-1">
+            <li><a href="#">TOP<br>トップ</a></li>
+            <li><a href="#">GOAL<br>目標</a></li>
+            <li><a href="#">WORKS<br>作品</a></li>
+            <li><a href="#">ABOUT<br>自己紹介</a></li>
+        </ul>
+    </nav>
+    <p>font-wight:bold;にすれば太字にできるんだ</p>
+    <p>li要素を変更するにはinline-blockに変える必要がある。</p>
+    <p>スクロールに追従してこないのでまだまだ勉強が必要 <br> <br></p>
+
+    <h1>Flexboxを使う</h1>
+    <p>dlタグ内部にあるdtタグはタイトル、ddタグはその内容</p>
+    <section class="flex-test">
+        <h2>FLEXBOX</h2>
+        <dl class="flex-container">
+            <div class="flex-item">
+                <dt>簡単に横並びにできる</dt>
+                <dd>display:flex;を指定するだけで簡単に横並びになる</dd>
+            </div>
+            <div class="flex-item">
+                <dt>余白の設定が簡単</dt>
+                <dd>justify-content: space-around;を指定すればよい</dd>
+            </div>
+            <div class="flex-item">
+                <dt>簡単にレスポンシブ対応</dt>
+                <dd>flex-direction:column;にすればすぐに縦並びにできる</dd>
+            </div>
+        </dl>
+    </section>
+    <p><br><br></p>
+    <h1>背景に関してのプロパティ</h1>
+    <section class="haikei">
+        <div class="bg-001">
+            <p>.bg-001 <br>敷き詰める</p>
         </div>
-        <section class="housin-group">
-        <h2>このサイトの運営方針</h2>
-            <ol class="housin-item">
-                <li>HTML/CSSの重要事項をまとめる</li>
-                <li>忘れがちなタグ、セレクタなどをまとめる</li>
-                <li>レイアウトを揃える上での注意点などを書く</li>
-            </ol>
-        </section>
-        <section class="hakushin">全然作ってないです！！</section>
-        <section class="c-langg">
-            <a href="clanginstall.html" class="c-lang">VScodeにC言語の環境を作ろう</a>
-        </section>
-        
-    </main>
+        <div class="px">px指定。縦横どっちかをautoにしないと笑える</div>
+        <div class="per">per指定。こっちは領域基準の割合</div>
+        <div class="cover">cover指定。見切れる</div>
+        <div class="contain">contain指定。アス比そのままで大きくする</div>
+    </section>
 </body>
 
 </html>
-
-<!--Emmetをもっとうまく使えるようにする-->
-<!--作業効率化のために他のスクリプトとか導入するのもありかと-->
-<!--Webサイトはブロックスタイルという認識をわすれない-->

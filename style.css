@@ -1,91 +1,221 @@
-@charset "utf-8";
-
-*{
+* {
+    padding: 0;
     margin: 0;
-    padding: 0; /*初期化設定　*は全要素を指定*/
+
 }
 
-header{
-    display: flex;
-    width: 100%;
-    height: 100px;
-    background-color: #ccc;
-    align-items: center;
+p {
+    line-height: 1.9;
 }
 
-.title{
-    margin-right:auto;
-    margin-left: 20px;
+img.floattest {
+    width: 340px;
+    float: right;
 }
 
-.menu-item{
-    list-style: none;
-    display: inline-block;
-    padding: 10px;
-    font-size: 18px;
+p.center {
     text-align: center;
-    margin: 10px;
-    height: 58px;
 }
 
-a{
-    text-decoration: none;
-    color: #000;
-}
-
-.menu-item:hover{
-    color: brown; /*なぜか色変更ができない*/
-    border-bottom: 1px solid #000;
-    cursor: pointer;
-}
-
-
-.menu-group{
-    padding-right: 20px;
-}
-
-section.housin-group{
-    width: 70%;
-    max-width: 1000px;
+p.boxmodeltest {
     display: block;
+    font-size: 24px;
+    background-color: aqua;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid #000;
+
+}
+
+p.content-box {
+    box-sizing: content-box;
+    display: block;
+    font-size: 24px;
+    background-color: rgb(0, 255, 72);
+    text-align: center;
+    width: 400px;
     margin: 20px auto;
+    border: 13px solid #000;
 }
 
-.housin-item{
-    padding-left: 50px;
-    font-size: 18p;
-}
-
-section h2{
-    margin: 20px 0px;
-    border-bottom:2px dotted #000;
-    font-size: 19px;
-    padding-bottom: 10px;
-}
-
-section h2::before{
-    content: "▼";
-    padding-right:15px;
-}
-
-img{
+p.border-box {
+    box-sizing: border-box;
     display: block;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0px auto;
-}
-
-section.hakushin{
-    font-size: 40px;
+    font-size: 24px;
+    background-color: rgb(0, 255, 72);
     text-align: center;
-    margin: 30px 10px 30px 10px;
+    width: 400px;
+    margin: 20px auto;
+    border: 13px solid #000;
 }
 
-.c-lang{
-    font-size: 30px;
-    border-bottom: solid 2px orange;
-}
-
-.c-langg{
+div.linkmake a {
+    display: block;
+    width: 200px;
+    margin: 40px auto;
+    padding: 1em;
     text-align: center;
+}
+
+@media screen and (min-width: 300px) {
+    a:hover {
+        opacity: 0.7;
+        /*不透明度を0.7にできる*/
+    }
+}
+
+a.text-link {
+    color: #008000;
+    text-decoration: underline;
+}
+
+a.button-link {
+    background-color: #ffd700;
+    text-decoration: none;
+    color: #ff4500;
+    font-size: 20px;
+}
+
+a.button-link2 {
+    background-color: #1e90ff;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 20px;
+    /*角丸にできちゃう*/
+    border-bottom: 4px solid #191970;
+}
+
+a.button-link2:active {
+    border-bottom: none;
+    transform: translateY(4px);
+}
+
+ul.hosiimo{
+    border: 10px solid #aae5e7;
+    padding:1em 1em 0;
+    list-style: none;
+    margin-bottom: 60px;
+}
+
+ul.hosiimo li{
+    border-bottom: 4px dotted #6baeb3;
+    margin-bottom: 1em;
+}
+
+ul.hosiimo li::before{
+    content: "☆彡";
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+nav{
+    box-sizing: border-box;
+}
+
+ul.gnav-list-1{
+    background-color: #1b9aaa;
+    padding: 0;
+    text-align: center;
+}
+
+ul.gnav-list-1 li{
+    display: inline-block;
+}
+
+ul.gnav-list-1 li a{
+    display: block;
+    padding: 1em;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+ul.gnav-list-1 li a::first-line {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ul.gnav-list-1 li a:hover{
+    background-color: #14727e;
+}
+
+section.flex-test{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin: 40px auto 0;
+    border: 1px dashed #ccc;
+    text-align: center;
+}
+
+section.flex-test h2{
+    margin-bottom: 1em;
+}
+
+/*dlタグ内の設定をしてく*/
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-item{
+    background-color: #09b;
+    color: #fff;
+    padding: 1em;
+    flex-basis: 25%;
+}
+
+.flex-item dt{
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/*モバイル用のflexbox設定*/
+@media screen and (max-width:500px) {
+    section.flex-test h2{
+        font-size: 1.1em;
+    }
+    .flex-container{
+        flex-direction: column;
+    }
+    .flex-item{
+        margin: 0 1em 1em;
+    }
+}
+
+.bg-001{
+    height: 800px;
+    background: url(imgtest.jpg) left center repeat;
+}
+
+div{
+    background: url(imgtest.jpg) right bottom no-repeat;
+    border: 1px dashed #000;
+}
+
+.px{
+    background-size: 150px 50px;
+    width: 400px;
+    height: 400px;
+}
+.per{
+    display: block;
+    background-size: 50% 50%;
+    width: 400px;
+    height: 400px;
+}
+.cover{
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+}
+.contain{
+    background-size: contain;
+    width: 400px;
+    height: 400px;
 }
