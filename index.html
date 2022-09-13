@@ -90,6 +90,64 @@
         <div class="cover">cover指定。見切れる</div>
         <div class="contain">contain指定。アス比そのままで大きくする</div>
     </section>
+    <p>こんなかんじ<br><br></p>
+    <p>いいね(???)</p>
+    <section class="positiontest">
+        <h1>position:relativeならずらせる</h1>
+        <img src="imgtest.jpg" alt="wai">
+    </section>
+
+    <section class="aboutme">
+        <div class="text-box">
+            <h2>私はどんな人物なのか</h2>
+            <p>九州工業大学情報工学部1年生です。HTMLやCSSの勉強をするためにこのサイトを開設しています。Githubを普段からよく使用しているので今回も使いました。</p>
+        </div>
+        <div class="img-box">
+            <img src="imgtest.jpg" alt="wai">
+        </div>
+    </section>
+    <p>box-shadow: 0 0 20px 2px rgba(0,0,0,0.2)<br>これはxオフセット、yオフセット、ぼかしの幅、広がり、色で指定できる。rgbaは不透明度指定<br><br></p>
+    <h1>お問い合わせフォーム</h1>
+    <form action="program.php" method="post">
+        <dl>
+            <div class="form-item">
+                <dt>お名前</dt>
+                <dd><input type="text" name="userName"></dd>
+            </div>
+            <div class="form-item">
+                <dt>メールアドレス</dt>
+                <dd><input type="email" name="userEmail"></dd>
+            </div>
+            <div class="form-item">
+                <dt>24歳</dt>
+                <dd>
+                    <label class="label-radio"><input type="radio" name="job" value="学生" checked>学生</label>
+                    <label class="label-radio"><input type="radio" name="job" value="会社員">会社員</label>
+                    <label class="label-radio"><input type="radio" name="job" value="その他">その他</label>
+                </dd>
+            </div>
+            <div class="form-item">
+                <dt>お問い合わせ種別・業</dt>
+                <dd>
+                    <select name="messageType">
+                        <option value="商品について" selected>善なる神とこの世の悪について</option>
+                        <option value="採用について">採用について</option>
+                        <option value="その他お問い合わせ">その他お問い合わせ</option>
+                    </select>
+                </dd>
+            </div>
+            <div class="form-item">
+                <dt>お問い合わせ内容</dt>
+                <dd><textarea name="message"></textarea></dd>
+            </div>
+        </dl>
+        <div class="form-submit">
+            <input type="submit" value="送信する">
+        </div>
+    </form>
+    <p>レスポンシブに対応したアンケートフォームは上みたいになる(適当)</p>
+    <div class="width">transition: width 0.5s ease-out 0s;</div>
+    
 </body>
 
 </html>
